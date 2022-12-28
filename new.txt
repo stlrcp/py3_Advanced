@@ -1,3 +1,25 @@
-eeeee
+nvcc hello3.cu
+nvcc -arch=sm_75 check1api.cu
+cuda-memcheck ./a.out
 
-www
+
+
+cuda编程 基础与实践 樊哲勇
+(或者在github中直接搜索书名)
+https://github.com/QINZHAOYU/CudaSteps
+
+
+
+
+
+Learn-CUDA-Programming
+
+https://github.com/tingshua-yts/Learn-CUDA-Programming
+
+
+
+
+
+Algorithm from Bilibili
+
+https://github.com/IRVING-L/Algorithm_fromBilibili
