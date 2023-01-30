@@ -113,6 +113,7 @@ void simon(int n)   // define the simon() function
 }
 
 
+//   C++指针与引用实例  https://blog.csdn.net/dgpikaqiu/article/details/120296850   
 #include <iostream>
 using namespace std;
 int main()
