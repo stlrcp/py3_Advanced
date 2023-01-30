@@ -90,7 +90,7 @@ int main()
     cout << "How fascinating! " << endl;
     return 0;
 }
-*/
+
 // ourfunc.cpp 
 #include <iostream>
 void simon(int);  // function prototypr for simon()
@@ -111,4 +111,70 @@ void simon(int n)   // define the simon() function
     cout << "Simon says touch your toes " << n << " times." << endl;
     // void functions don't need return statements
 }
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[10];
+    int *p = a;
+    int i = 0;
+    cout << "请输入10个整数: " << endl;
+    for (i=0; i< 10; i++)
+    {
+        cin >> *(p+i);
+    }
+    cout << "反转前：" << endl;
+    for (i=0; i<10; i++)
+    {
+        cout << *(p+i) << " ";
+    }
+    cout << endl;
+    p = a;     // 确保指针p指向数组a的首地址
+    int* q = p + ((sizeof(a) / sizeof(a[0])) - 1);   // 指针指向数组a的最后一位地址
+    while (p < q)
+    {
+        int t = *p;
+        *p = *q;
+        *q = t;
+        p++;
+        q--;
+    }
+    p = a;      // 确保指针p指向数组a的首地址
+    cout << "交换后：" << endl;
+    for (i=0; i<10; i++)
+    {
+        cout << *(p+i) << " ";
+    }
+    cout << endl;
+    return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+void change(int *a, int *b);
+int main()
+{
+    int x = 2;
+    int y = 3;
+    cout << "交换前：" << "x= " << x << " " << "y= " << y << endl;
+    change(&x, &y);
+    cout << "交换后：" << "x= " << x << " " << "y= " << y << endl;
+    return 0;
+}
+void change(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+
+
+
+
+
+
 
