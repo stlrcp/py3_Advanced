@@ -2,4 +2,9 @@
 
 Study notes
 
+github learning
+
+hiifeng
+RVC-Project
+CompVis/stable-diffusion
 
