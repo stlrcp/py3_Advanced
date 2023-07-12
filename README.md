@@ -4,7 +4,7 @@ Study notes
 
 github learning
 
-hiifeng
+[hiifeng](https://www.hicairo.com/)
 RVC-Project
 CompVis/stable-diffusion
 
