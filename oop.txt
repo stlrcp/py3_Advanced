@@ -56,6 +56,6 @@ class NumberDisplay {
     Constructor and methods omitted.
 }
 
-// 反汇编
+// 反汇编  instruction(指令)
 objdump -d sample.o
 objdump -s -d sample.o
