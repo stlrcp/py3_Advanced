@@ -215,6 +215,61 @@ int main(){
     // 等各个线程退出后，进程才结束，否则进程强制了，线程可能还没反应过来；
     pthread_exit(NULL);
 }
+
+
+
+// std::thread
+// C++ 11 之后添加了新的标准线程库 std::thread, std::thread 在 <thread> 头文件中声明，
+// 因此使用 std::thread 时需要包含在 <thread> 头文件。
+// 之前一些编译器使用 C++11 的编译参数是 -std=c++11
+// g++ -std=c++11 test.cpp
+// std::thread 默认构造函数，创建一个空的 std::thread 执行对象。
+// #include <thread>
+// std::thread thread_object(callable)
+// 一个可调用对象可以是以下三个中的任何一个：
+// - 函数指针
+// - 函数对象
+// - lambda 表达式
+// 定义 callable 后，将其传递给 std::thread 构建函数 thread_object.
+#include <iostream>  // 演示多线程的 CPP 程序，使用三个不同的 可调用对象
+#include <thread>
+using namespace std;
+void foo(int z){  // 一个虚函数
+    for (int i = 0; i < z; i++){
+        cout << "线程使用函数指针作为可调用参数\n";
+    }
+}
+// 可调用对象
+class thread_obj{
+    public:
+        void operator()(int x){
+            for (int i = 0; i < x; i++)
+                cout << "线程使用函数对象作为可调用参数\n";
+        }
+};
+int main(){
+    cout << "线程1, 2, 3 独立运行" << endl;
+    // 函数指针
+    thread th1(foo, 3);
+    // 函数对象
+    thread th2(thread_obj(), 3);
+    // 定义 Lambda 表达式
+    auto f = [](int x)
+    {
+        for (int i = 0; i < x; i++)
+            cout << "线程使用 lambda 表达式作为可调用参数\n";
+    };
+    // 线程通过使用 lambda 表达式作为可调用的参数
+    thread th3(f, 3);
+    // 等待线程完成
+    // 等待线程 t1 完成
+    th1.join();
+    // 等待线程 t2 完成
+    th2.join();
+    // 等待线程 t3 完成
+    th3.join();
+    return 0;
+} // g++ -lpthread -std=c++11 tmp_namespa.cpp
 */
 
 
