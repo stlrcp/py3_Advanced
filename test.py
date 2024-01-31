@@ -56,3 +56,28 @@ print(output.mean())
 for para in model.parameters():
     print("the backward weigt = ", para.mean(), para.size())
 '''
+
+
+"""
+#### 测试 matmul 的 backward 用法
+import torch
+from torch.autograd import Variable
+import torch.nn as nn
+
+torch.manual_seed(2)
+torch.cuda.manual_seed_all(2)
+
+a = torch.randn(256,28, 29, 128).cuda().requires_grad_(True)
+b = torch.randn(128).cuda().requires_grad_(True)
+c = a.matmul(b)
+# print(c.shape)
+d = torch.randn(256, 28, 29).cuda()
+# torch.save(a, "a_1.pth")
+# torch.save(b, "b_1.pth")
+# torch.save(d, "d_1.pth")
+c.backward(d)
+# print(a.grad)
+# print(b.grad)
+torch.save(a.grad, "a_g_1.pth")
+torch.save(b.grad, "b_g_1.pth")
+"""
