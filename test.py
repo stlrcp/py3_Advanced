@@ -81,3 +81,25 @@ c.backward(d)
 torch.save(a.grad, "a_g_1.pth")
 torch.save(b.grad, "b_g_1.pth")
 """
+
+
+'''
+import torch
+import torch.nn as nn
+import sys
+
+torch.manual_seed(2)
+torch.cuda.manual_seed_all(2)
+
+class dropmodel(nn.Module):
+    def __init__(self):
+        super(dropmodel, self).__init__()
+        self.dropout = nn.Dropout(p=0.2)
+    def forward(self, inputs):
+        out = self.dropout(inputs)
+        return out
+model = dropmodel().cuda()
+inp = torch.randn(255,255,128,3).cuda()
+out = model(inp)
+print(out)
+'''
