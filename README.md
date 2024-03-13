@@ -15,3 +15,5 @@ github learning
 RVC-Project
 CompVis/stable-diffusion
 
+https://github.com/DeepLink-org/AIChipBenchmark/tree/main/operators/speed_test 
+
