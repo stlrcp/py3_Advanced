@@ -42,7 +42,9 @@ alpha = 2.0
 # print(_scaled_index_add(inputt, index, source, scaling, alpha))
 # print(torch.index_add(inputt, dim=0, source=scaling * source, index=index, alpha=alpha))
 tor_add_res = torch.index_add(inputt, dim=0, source=scaling * source, index=index, alpha=alpha)
-print("tor_add_res = ", tor_add_res.shape, tor_add_res.dtype)
+# xfo_add_res = _scaled_index_add(inputt, index, source, scaling, alpha)
+# print("tor_add_res = ", tor_add_res.shape, tor_add_res.dtype)
+# tensor_diff(tor_add_res, xfo_add_res)
 
 
 
