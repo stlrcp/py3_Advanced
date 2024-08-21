@@ -17,3 +17,4 @@ CompVis/stable-diffusion
 
 https://github.com/DeepLink-org/AIChipBenchmark/tree/main/operators/speed_test 
 
+https://greasyfork.org/zh-CN/scripts/by-site/zhihu.com
