@@ -21,3 +21,5 @@ https://github.com/DefTruth/CUDA-Learn-Notes
 https://github.com/DeepLink-org/AIChipBenchmark
 
 https://github.com/Qwesh157/conv_op_optimization
+
+https://github.com/ifromeast/cuda_learning/tree/main/03_gemm
