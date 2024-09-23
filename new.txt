@@ -9,18 +9,13 @@ cuda编程 基础与实践 樊哲勇
 https://github.com/QINZHAOYU/CudaSteps
 
 
-
-
-
 Learn-CUDA-Programming
-
 https://github.com/tingshua-yts/Learn-CUDA-Programming
 
 
-
-
-
 Algorithm from Bilibili
-
 https://github.com/IRVING-L/Algorithm_fromBilibili
 
+https://github.com/DefTruth/CUDA-Learn-Notes
+
+https://github.com/DeepLink-org/AIChipBenchmark
