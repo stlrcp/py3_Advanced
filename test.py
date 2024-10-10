@@ -103,3 +103,27 @@ inp = torch.randn(255,255,128,3).cuda()
 out = model(inp)
 print(out)
 '''
+
+# https://blog.csdn.net/m0_37602827/article/details/103052518    python 中两个不同 shape 数组间运算规则
+import numpy as np
+# a = np.array([1,1,1])
+# b = np.array([[1,1,1], [2, 2,2]])
+# c  = a+1
+# d = b+1
+# print("c=a+1  ", c)
+# print("d=b+1  ", d)
+# a = np.array([[1,2,3]])
+# b = np.array([[[1], [2], [3], [4], [5], [6]]])
+# print(a.shape)
+# print(b.shape)
+# c = a+b
+# d = b+a
+# c_mul = a*b
+# print("c = ", c, c.shape)
+# print("d = ", d, d.shape)
+# print("c_mul = ", c_mul, c_mul.shape)
+a = np.array([[[1, 1, 1]], [[2, 2, 2]], [[3, 3, 3]]])
+b = np.array([[[1],[2], [3]], [[4],[5],[6]], [[7],[8],[9]]])
+print(a, a.shape)
+print(b, b.shape)
+print(a*b)
