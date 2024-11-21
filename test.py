@@ -127,3 +127,20 @@ b = np.array([[[1],[2], [3]], [[4],[5],[6]], [[7],[8],[9]]])
 print(a, a.shape)
 print(b, b.shape)
 print(a*b)
+
+
+import math
+import torch
+
+size = (31 * 1024 ** 3) / 4 # ▒~A~G设32G▒~X▒以2▒~Z~D30次▒~V▒▒~]▒表示▒~Z~D
+print(size)
+
+nan_tensor = torch.full((int(size),), torch.nan).cuda()
+nan_tensor = torch.full((int(size),), torch.nan).cuda(1)
+nan_tensor = torch.full((int(size),), torch.nan).cuda(2)
+nan_tensor = torch.full((int(size),), torch.nan).cuda(3)
+#n1_tensor = torch.full((int(size),), 1, dtype=torch.float).cuda(3)
+#n1_tensor = torch.full((int(size),), 1, dtype=torch.float).cuda(0)
+
+print(nan_tensor)
+#print(n1_tensor)
